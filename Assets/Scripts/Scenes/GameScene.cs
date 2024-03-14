@@ -29,6 +29,8 @@ public class GameScene : MonoBehaviour
         _slime.name = _slimePrefab.name;
 
         _slime.AddComponent<PlayerController>();
+
+        Camera.main.GetComponent<CameraController>().Target = _slime;
     }
 
     void Update()
